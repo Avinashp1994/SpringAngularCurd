@@ -1,0 +1,28 @@
+label{
+    font-weight: bold;
+    color:lightseagreen;
+}
+
+input{
+    width: 400px;
+    
+}
+
+#button{
+    width: 150px;
+}
+
+h3{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: crimson;
+    font-size: 35px;
+}
+
+/* h3{
+    margin-top: 20px;
+} */
+
+section{
+    margin-top: -35px;
+}

@@ -1,0 +1,17 @@
+li{
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+a{
+    font-size: 20px;
+    
+}
+
+a:hover{
+    color:red;
+}
+
+nav ul li a{
+    text-decoration: none;
+}

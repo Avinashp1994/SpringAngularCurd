@@ -1,0 +1,28 @@
+<!-- <h1>All Employee List</h1> -->
+<div class="container">
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <!-- <th>Id</th> -->
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>D.O.B</th>
+            <th>Gender</th>
+            <th>EmailId</th>
+            <th>Mobile_Number</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employs">
+            <!-- <td>{{e.id}}</td> -->
+            <td>{{e.firstname}}</td>
+            <td>{{e.lastname}}</td>
+            <td>{{e.dob}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.mobile}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

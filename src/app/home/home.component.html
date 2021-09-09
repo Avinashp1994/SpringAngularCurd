@@ -1,0 +1,96 @@
+<h1>Welcome To Home Page</h1>
+{{name}}
+Title:{{product.title}}
+Price:{{product.price}}
+
+<button [style.height.px] = 'btnHeight' [style.width.px]= 'btnWidth'>Add_Product</button>
+
+<button (click)="addProduct()">AddProduct</button>
+
+Enter The Name:<input type="text" [(ngModel)]='name'>
+<h3>{{name}}</h3>
+<h3>{{greetmessage}}</h3>
+
+<button (click)="valuChanged()">Click_Here</button>
+
+
+<h1>Products List</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products;">
+            <td>{{p.id}}</td>
+            <td>{{p.title | uppercase}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.stock}}</td>
+            <td *ngIf="p.stock <= 10">
+                Out Of Stock
+            </td>
+            <td *ngIf="p.stock >= 10">
+                In_Stock
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 appHlight>HostBinding</h1>
+
+<div class='card'>
+    <div class='card-header'>
+        ngSwitch Example
+    </div>
+    <div class="card-body">
+        Input string : <input type='text' [(ngModel)]="num" />
+
+        <div [ngSwitch]="num">
+            <div *ngSwitchCase="'1'">One</div>
+            <div *ngSwitchCase="'2'">Two</div>
+            <div *ngSwitchCase="'3'">Three</div>
+            <div *ngSwitchCase="'4'">Four</div>
+            <div *ngSwitchCase="'5'">Five</div>
+            <div *ngSwitchDefault>This is Default</div>
+        </div>
+    </div>
+</div><br />
+
+{{name1 | uppercase}}<br/>
+{{name1 | lowercase}}<br />
+{{name1 | titlecase}}<br />
+{{name1 | slice: 3}}<br />
+{{name1 | slice: 3:5}}<br />
+{{person | json}}<br />
+{{person}}<br />
+{{val | number: '1.2-3'}}<br />
+{{val | number: '3.4-5'}}<br />
+{{val | number: '3.1-2'}}<br />
+{{val | percent }}<br />
+{{val | currency}}<br />
+{{val | currency: 'GBP'}}<br />
+{{val | currency: 'INR'}}<br />
+{{hdate}}<br />
+{{hdate | date: 'shortDate'}}<br />
+{{hdate | date: 'shortTime'}}<br />
+{{hdate | date: 'mediumDate'}}<br />
+{{hdate | date: 'mediumTime'}}<br />
+{{hdate | date: 'longTime'}}<br />
+{{hdate | date: 'longDate'}}<br />
+
+{{name1 | arrangeorder : 'Mr.' : 'the Great'}}<br />
+
+{{characters | sort: 'ascending'}}<br />
+{{characters | sort: 'descending'}}<br />
+
+Enter The serach Text : <input [(ngModel)]='searchText' placeholder="Enter SerachText Here">
+<ul>
+    <li *ngFor ='let c of characters | filter: searchText'>
+        {{ c }}
+    </li>
+</ul>
